@@ -42,7 +42,6 @@ abstract class AbstractAdNode extends AbstractNode
         return $this->domElement->firstChild;
     }
 
-
     /**
      * Get id for Ad element
      *
@@ -66,6 +65,20 @@ abstract class AbstractAdNode extends AbstractNode
 
         return $this;
     }
+
+    /**
+     * Set 'sequence' attribute of 'ad' element
+     *
+     * @param string $sequence
+     *
+     * @return InLine|Wrapper|AbstractAdNode
+     */
+     public function setSequence($sequence)
+     {
+       $this->domElement->setAttribute('sequence', $sequence);
+
+       return $this;
+     }
 
     /**
      * /Vast/Ad/Inline/AdSystem element
